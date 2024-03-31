@@ -88,7 +88,6 @@
         CGSize size = kSize;
         CGRect rect = (CGRect) {.size = size, .origin = CGPointZero};
         rect = CGRectInset(rect, kPadding, kPadding);
-        
         UIGraphicsBeginImageContextWithOptions(size, NO, 0);
         CGContextRef context = UIGraphicsGetCurrentContext();
         

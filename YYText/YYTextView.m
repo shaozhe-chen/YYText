@@ -389,6 +389,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
         CGSize size = [layout textBoundingSize];
         BOOL needDraw = size.width > 1 && size.height > 1;
         if (needDraw) {
+            if (size.width <= 0 || size.height <= 0) return;
             UIGraphicsBeginImageContextWithOptions(size, NO, 0);
             CGContextRef context = UIGraphicsGetCurrentContext();
             [layout drawInContext:context size:size debug:self.debugOption];
